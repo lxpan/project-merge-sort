@@ -5,9 +5,11 @@ function merge(A, B) {
 
     while (i < A.length && j < B.length) {
         if (A[i] < B[j]) {
-            result.push(A[i++]);
+            result.push(A[i]);
+            i += 1;
         } else {
-            result.push(B[j++]);
+            result.push(B[j]);
+            j += 1;
         }
     }
 
