@@ -12,12 +12,20 @@ function merge(A, B) {
     }
 
     // copy remaining elements in A
-    for (; i < A.length; i++) {
+    // for (; i < A.length; i++) {
+    //     result.push(A[i]);
+    // }
+    while (i < A.length) {
         result.push(A[i]);
+        i += 1;
     }
     // copy remaining elements in B
-    for (; j < B.length; j++) {
+    // for (; j < B.length; j++) {
+    //     result.push(B[j]);
+    // }
+    while (j < B.length) {
         result.push(B[j]);
+        j += 1;
     }
     return result;
 }
@@ -36,4 +44,4 @@ function merge_sort(arr) {
 let unsortedA = [5, 2, 1, 3, 6, 4];
 let unsortedB = [9, 3, 7, 5, 6, 4, 8, 2];
 
-console.log(merge_sort(unsortedB));
+console.log(merge_sort(unsortedA));
